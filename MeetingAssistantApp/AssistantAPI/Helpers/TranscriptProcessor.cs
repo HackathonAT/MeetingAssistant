@@ -12,7 +12,6 @@ namespace AssistantAPI.Helpers
         /// <returns></returns>
         public static string ProcessVideoBreakDown(string jsonString)
         {
-            return "mytranscript";
             throw new NotImplementedException();
         }
 
