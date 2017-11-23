@@ -14,7 +14,8 @@ namespace AssistantAPI.Helpers
         /// <returns>json string representing the command</returns>
         public static string UnderstandCommand(string commandString)
         {
-            throw new NotImplementedException();
+            return "yes sir";
+            // throw new NotImplementedException();
         }
 
 
