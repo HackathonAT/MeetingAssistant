@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingAssistantApp", "Meet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoHelper", "VideoHelper\VideoHelper.csproj", "{4424E67E-0C66-4864-8C4E-C4F4346B684F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssistantAPI", "AssistantAPI\AssistantAPI.csproj", "{93A43B88-F9F7-4BE8-9B77-0D5B8E2F9363}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4424E67E-0C66-4864-8C4E-C4F4346B684F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4424E67E-0C66-4864-8C4E-C4F4346B684F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4424E67E-0C66-4864-8C4E-C4F4346B684F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93A43B88-F9F7-4BE8-9B77-0D5B8E2F9363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A43B88-F9F7-4BE8-9B77-0D5B8E2F9363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93A43B88-F9F7-4BE8-9B77-0D5B8E2F9363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93A43B88-F9F7-4BE8-9B77-0D5B8E2F9363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A4C3308B-C9B4-45B3-8F2C-D9C9D28F3CC7} = {6450F7B6-FF3A-4E7F-BC5B-26B2B5AA2298}
 		{4424E67E-0C66-4864-8C4E-C4F4346B684F} = {AC12B0C9-1F6C-4232-A6B1-122A24F5C3B9}
+		{93A43B88-F9F7-4BE8-9B77-0D5B8E2F9363} = {BE8F558C-4BD2-40E3-B169-7F4DAD200879}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {623F06DF-CFE2-4224-B0C8-7AA4EFFA0632}
