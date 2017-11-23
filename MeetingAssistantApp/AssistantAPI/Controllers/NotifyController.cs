@@ -10,7 +10,7 @@ namespace AssistantAPI.Controllers
 {
     public class NotifyController : ApiController
     {
-        // POST api/values
+        // POST api/Notify
         public void Post([FromUri]string id, [FromUri] string state)
         {
             // I get the notification that a video is indexed
