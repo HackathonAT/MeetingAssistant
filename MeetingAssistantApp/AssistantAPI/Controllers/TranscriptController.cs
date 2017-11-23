@@ -11,7 +11,7 @@ namespace AssistantAPI.Controllers
     public class TranscriptController : ApiController
     {
         // POST api/Transcript
-        public string Get([FromBody] string jsonString)
+        public string Post([FromBody]string jsonString)
         {
             return TranscriptProcessor.ProcessVideoBreakDown(jsonString);
 
