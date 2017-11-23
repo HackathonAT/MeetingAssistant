@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI", "GUI", "{6450F7B6-FF3A-4E7F-BC5B-26B2B5AA2298}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{AC12B0C9-1F6C-4232-A6B1-122A24F5C3B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingAssistantApp", "MeetingAssistantApp\MeetingAssistantApp.csproj", "{A4C3308B-C9B4-45B3-8F2C-D9C9D28F3CC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoHelper", "VideoHelper\VideoHelper.csproj", "{4424E67E-0C66-4864-8C4E-C4F4346B684F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +23,17 @@ Global
 		{A4C3308B-C9B4-45B3-8F2C-D9C9D28F3CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4C3308B-C9B4-45B3-8F2C-D9C9D28F3CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4C3308B-C9B4-45B3-8F2C-D9C9D28F3CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4424E67E-0C66-4864-8C4E-C4F4346B684F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4424E67E-0C66-4864-8C4E-C4F4346B684F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4424E67E-0C66-4864-8C4E-C4F4346B684F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4424E67E-0C66-4864-8C4E-C4F4346B684F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A4C3308B-C9B4-45B3-8F2C-D9C9D28F3CC7} = {6450F7B6-FF3A-4E7F-BC5B-26B2B5AA2298}
+		{4424E67E-0C66-4864-8C4E-C4F4346B684F} = {AC12B0C9-1F6C-4232-A6B1-122A24F5C3B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {623F06DF-CFE2-4224-B0C8-7AA4EFFA0632}
