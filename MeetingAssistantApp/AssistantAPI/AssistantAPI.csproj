@@ -181,12 +181,15 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Classes\TranscripctsData.cs" />
+    <Compile Include="Controllers\ExecuteController.cs" />
     <Compile Include="Controllers\NotifyController.cs" />
     <Compile Include="Controllers\ProcessController.cs" />
     <Compile Include="Controllers\TranscriptController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CommandsHelper.cs" />
+    <Compile Include="Helpers\HttpHelper.cs" />
     <Compile Include="Helpers\LUISHelper.cs" />
     <Compile Include="Helpers\TranscriptProcessor.cs" />
     <Compile Include="Helpers\VideoHelper.cs" />
