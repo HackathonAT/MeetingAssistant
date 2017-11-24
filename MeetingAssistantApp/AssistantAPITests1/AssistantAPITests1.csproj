@@ -61,10 +61,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <Content Include="testdata\json1.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="testdata\test.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AssistantAPI\AssistantAPI.csproj">

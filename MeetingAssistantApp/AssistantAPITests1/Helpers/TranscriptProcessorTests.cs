@@ -13,16 +13,18 @@ namespace AssistantAPI.Helpers.Tests
     public class TranscriptProcessorTests
     {
         [TestMethod()]
-        [DeploymentItem("json1.json")]
+        [DeploymentItem("test.json")]
         public void ProcessVideoBreakDownTest()
         {
-            string file = "json1.json";
+            string file = "test.json";
             Assert.IsTrue(File.Exists(file), "deployment failed: " + file +
                " did not get deployed");
             string json = File.ReadAllText(file);
-            var res =TranscriptProcessor.ProcessVideoBreakDown(json);
+            var res = TranscriptProcessor.ProcessVideoBreakDown(json);
             Assert.IsNotNull(res);
         }
+
+       
     }
 }
 
