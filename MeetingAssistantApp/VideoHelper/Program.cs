@@ -24,7 +24,7 @@ namespace VideoHelper
             var queryString = HttpUtility.ParseQueryString(string.Empty);
 
             // Request headers
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "44a08bf0dd99406cb9b19f09159ab3b1");
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "XXXXXXX");
 
             // Request parameters
             queryString["name"] = "Testvideo";

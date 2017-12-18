@@ -28,8 +28,8 @@ namespace AssistantAPI.Controllers
                     foreach (var command in commands)
                     {
                         //send transcript to LUIS
-                        var jsonCmd = LUISHelper.UnderstandCommand(command);
-                        var succeded = LUISHelper.ExecuteCommand(jsonCmd);
+                        //var jsonCmd = LUISHelper.UnderstandCommand(command);
+                        var succeded = LUISHelper.ExecuteCommand(command);
                     }
                     
                 }

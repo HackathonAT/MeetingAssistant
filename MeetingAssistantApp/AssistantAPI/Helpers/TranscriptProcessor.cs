@@ -3,6 +3,8 @@ using GemBox.Document;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace AssistantAPI.Helpers
 {
@@ -15,56 +17,52 @@ namespace AssistantAPI.Helpers
         /// <returns></returns>
         public static string ProcessVideoBreakDown(string jsonString)
         {
-            JToken token = JObject.Parse(jsonString);
-            JObject obj = JObject.Parse(jsonString);
-            List<TranscripctsData> transcriptsDataList = new List<TranscripctsData>();
-           
-            foreach (var pair in obj)
+            
+            StringBuilder res= new StringBuilder();
+            dynamic obj = Newtonsoft.Json.JsonConvert.DeserializeObject(jsonString);
+            string username = obj.userName;
+            var br = obj.breakdowns;
+            foreach (var bd in br)
             {
-                TranscripctsData temp = new TranscripctsData();
-                temp.key = pair.Key.ToString();
-                temp.data = pair.Value.ToString();
-                transcriptsDataList.Add(temp);
-
-                foreach (var item in pair.Value)
-                {
-                    temp.key = item.ToString();
-                    temp.data = item.ToString();
-                    transcriptsDataList.Add(temp);
-                }
-                 
-            }
-
-            createWordFromList(transcriptsDataList);
-
-            return transcriptsDataList.ToString();
-        }
-
-        public static void createWordFromList(List<TranscripctsData> list)
-        {
-            ComponentInfo.SetLicense("FREE-LIMITED-KEY");
-            ComponentInfo.FreeLimitReached += (sender, e) => e.FreeLimitReachedAction = FreeLimitReachedAction.ContinueAsTrial;
-            DocumentModel document = new DocumentModel();
-
-            foreach (var item in list)
-            {
-           
-                Section section = new Section(document);
-                document.Sections.Add(section);
-
-                Paragraph paragraph = new Paragraph(document);
-                section.Blocks.Add(paragraph);
-
-                Run run = new Run(document, item.ToString());
-                paragraph.Inlines.Add(run);
-
+                var participants =  bd.insights.participants;
                 
+                    Dictionary<string, string> partList = new Dictionary<string, string>();
+                    foreach (var participant in participants)
+                    {
+                        partList.Add(participant.id.ToString()
+                            , participant.name.ToString());
+                    }
+                var parts = partList.ToArray();
+                var tbs = bd.insights.transcriptBlocks;
+                foreach (var tb in tbs)
+                {
+                    var lines = tb.lines;
+                    foreach (var line in lines)
+                    {
+                        try
+                        {
+                            var part = parts[line.participantId];
+                            var str = string.Format("{0} : {1} ", part, line.text);
+                            res.AppendLine(str);
+                        }
+                        catch (Exception)
+                        {
+
+                            //ignore
+                        }
+                    }
+                }
+
+
+
             }
+            
+           
+           
 
-            document.Save("Transscript.docx");
-
-
+            return res.ToString();
         }
+
 
         public static List<string> GetCommands(string jsonString)
         {

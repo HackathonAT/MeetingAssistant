@@ -21,7 +21,8 @@ namespace AssistantAPI.Helpers
 
         public static bool ExecuteCommand(string jsonCommand)
         {
-            throw new NotImplementedException();
+            Parser.ExecuteCommand(jsonCommand);
+            return true;
         }
     }
 }

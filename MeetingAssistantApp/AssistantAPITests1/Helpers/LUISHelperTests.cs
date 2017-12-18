@@ -17,7 +17,15 @@ namespace AssistantAPI.Helpers.Tests
             var commandString = "Send email to Daniela";
             var jsonString = LUISHelper.UnderstandCommand(commandString);
             Assert.IsNotNull(jsonString);
-            
+
+        }
+
+        [TestMethod()]
+        public void ExecuteCommandTest()
+        {
+            var commandString = "Marian, please finish the business analysis today";
+            var res= LUISHelper.ExecuteCommand(commandString);
+            Assert.IsTrue(res);
         }
     }
 }
